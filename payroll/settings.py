@@ -31,6 +31,12 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'company.apps.CompanyConfig',
+    'employee.apps.EmployeeConfig',
+    'payrun.apps.PayrunConfig',
+    'report.apps.ReportConfig',
+    'bill.apps.BillConfig',
+    'settings.apps.SettingsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

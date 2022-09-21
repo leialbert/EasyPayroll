@@ -18,5 +18,10 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('company/',include(company.urls)),
+    path('company/',include('company.urls',namespace='company')),
+    path('employee/',include('employee.urls',namespace='employee')),
+    path('payrun/',include('payrun.urls',namespace='payrun')),
+    path('report/',include('report.urls',namespace='report')),
+    path('bill/',include('bill.urls',namespace='bill')),
+    path('settings/',include('settings.urls',namespace='settings')),
 ]

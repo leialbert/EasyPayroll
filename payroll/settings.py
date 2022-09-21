@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'home.apps.HomeConfig',
+    'dashboard.apps.DashboardConfig',
     'company.apps.CompanyConfig',
     'employee.apps.EmployeeConfig',
     'payrun.apps.PayrunConfig',

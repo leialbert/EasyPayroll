@@ -11,6 +11,7 @@ class Company(models.Model):
     zip_code = models.CharField('Zip/Post Code', max_length=20)
     city = models.CharField('City',max_length=20)
     province = models.CharField('Province',max_length=20)
+    country = models.CharField('Country',max_length=20)
 
     def __str__(self) -> str:
         return super().__str__()

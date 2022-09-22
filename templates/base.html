@@ -6,43 +6,43 @@
         <div class="position-sticky pt-3 sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
+              <a class="nav-link active" aria-current="page" href="{% url 'dashboard:index' %}">
                 <span data-feather="home" class="align-text-bottom"></span>
                 Dashboard
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{% url 'company:index' %}">
                 <span data-feather="file" class="align-text-bottom"></span>
                 Company
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{% url 'employee:index' %}">
                 <span data-feather="users" class="align-text-bottom"></span>
                 Employee
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{% url 'payrun:index' %}">
                 <span data-feather="play" class="align-text-bottom"></span>
                 Pay Run
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{% url 'report:index' %}">
                 <span data-feather="bar-chart-2" class="align-text-bottom"></span>
-                Reports
+                Report
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{% url 'bill:index' %}">
                 <span data-feather="dollar-sign" class="align-text-bottom"></span>
                 Bill
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="{% url 'settings:index' %}">
                 <span data-feather="settings" class="align-text-bottom"></span>
                 Settings
               </a>

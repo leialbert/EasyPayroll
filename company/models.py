@@ -3,13 +3,13 @@ from django.db import models
 # Create your models here.
 class Company(models.Model):
     name = models.CharField('Company Name', max_length=120)
-    tel  = models.CharField('Telephone', max_length=20)
-    email = models.EmailField('Email')
-    website = models.URLField('Website')
-    addr1 = models.CharField('Address Line 1',max_length=120)
-    addr2 = models.CharField('Address Line 2',max_length=120)
-    zip_code = models.CharField('Zip/Post Code', max_length=20)
-    city = models.CharField('City',max_length=20)
+    tel  = models.CharField('Telephone',blank=True, max_length=20)
+    email = models.EmailField('Email',blank=True)
+    website = models.URLField('Website',blank=True)
+    addr1 = models.CharField('Address Line 1',blank=True,max_length=120)
+    addr2 = models.CharField('Address Line 2',blank=True,max_length=120)
+    zip_code = models.CharField('Zip/Post Code',blank=True, max_length=20)
+    city = models.CharField('City',blank=True,max_length=20)
     province = models.CharField('Province',max_length=20)
     country = models.CharField('Country',max_length=20)
 

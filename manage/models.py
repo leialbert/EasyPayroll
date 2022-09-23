@@ -42,6 +42,7 @@ class PayComponentProperty(models.Model):
     category_choice = [('E','Earnings'),('D','Deductions'),('C','Configuration')]
     type = models.CharField('Type',choices=category_choice,max_length=1)
     name = models.CharField('Property Name',max_length=20)
+    code = models.CharField('Property Code', max_length=5,unique=True,null=True)
 
     def __str__(self):
         return self.name

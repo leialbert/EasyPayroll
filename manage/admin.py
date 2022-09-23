@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Company,Account,PayComponent,Area,Frequency
+from .models import Company,Account,PayComponent,PayComponentProperty,Area,Frequency
 
 # Register your models here.
 @admin.register(Company)
@@ -18,6 +18,10 @@ class AccountAdmin(admin.ModelAdmin):
 @admin.register(PayComponent)
 class PayComponentAdmin(admin.ModelAdmin):
     list_display = ('category','code','name',)
+
+@admin.register(PayComponentProperty)
+class PayComponentPropertyAdmin(admin.ModelAdmin):
+    list_display = ('type','name','code',)
 @admin.register(Area)
 class AreaAdmin(admin.ModelAdmin):
     list_display = ('country','country_code','province','province_code',)

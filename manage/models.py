@@ -37,6 +37,14 @@ class PayComponent(models.Model):
     category = models.CharField('category',choices=category_choice,max_length=10,default='')
     def __str__(self):
         return self.name
+
+class PayComponentProperty(models.Model):
+    category_choice = [('E','Earnings'),('D','Deductions'),('C','Configuration')]
+    type = models.CharField('Type',choices=category_choice,max_length=1)
+    name = models.CharField('Property Name',max_length=20)
+
+    def __str__(self):
+        return self.name
 class Area(models.Model):
     country = models.CharField('Country Name', max_length=20)
     country_code = models.CharField('Country Code',max_length=5,unique=True)

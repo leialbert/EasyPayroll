@@ -31,10 +31,14 @@ class Account(models.Model):
     def __str__(self):
         return self.username
 class PayComponent(models.Model):
-    category_choice = [('E','Earnings'),('D','Deductions')]
+    category_choice = [('E','Earnings'),('D','Deductions'),('C','Configuration')]
+    category = models.CharField('category',choices=category_choice,max_length=10,default='')
     code = models.CharField('Component Code',max_length=5)
     name = models.CharField('Pay Component', max_length=20)
-    category = models.CharField('category',choices=category_choice,max_length=10,default='')
+    type_choice = [('R','Rate'),('A','Amount'),('F','Fixed')]
+    type = models.CharField('Input Type',max_length=6,choices=type_choice)
+    properties = models.JSONField('Properties')
+    
     def __str__(self):
         return self.name
 
@@ -47,8 +51,9 @@ class PayComponentProperty(models.Model):
     def __str__(self):
         return self.name
 class Area(models.Model):
+    country_code_list = [('CAN','CAN'),('USA','USA'),('CHN','CHN')]
     country = models.CharField('Country Name', max_length=20)
-    country_code = models.CharField('Country Code',max_length=5,unique=True)
+    country_code = models.CharField('Country Code',max_length=5,choices=country_code_list)
     province = models.CharField('Province',max_length=20)
     province_code = models.CharField('Province Code', max_length=5)
     def __str__(self):

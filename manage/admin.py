@@ -17,7 +17,8 @@ class AccountAdmin(admin.ModelAdmin):
 
 @admin.register(PayComponent)
 class PayComponentAdmin(admin.ModelAdmin):
-    list_display = ('category','code','name',)
+    list_display = ('category','name','code','type','properties',)
+    list_display_links = ('name',)
 
 @admin.register(PayComponentProperty)
 class PayComponentPropertyAdmin(admin.ModelAdmin):

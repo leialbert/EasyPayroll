@@ -22,8 +22,7 @@ urlpatterns = [
     path('employee/',include('employee.urls',namespace='employee')),
     path('payrun/',include('payrun.urls',namespace='payrun')),
     path('report/',include('report.urls',namespace='report')),
-    path('bill/',include('bill.urls',namespace='bill')),
     path('settings/',include('settings.urls',namespace='settings')),
-    
+    path('manage/',include('manage.urls',namespace='manage')),
     path('admin/', admin.site.urls),
 ]

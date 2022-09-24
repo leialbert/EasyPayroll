@@ -1,9 +1,8 @@
 from django.db import models
-from django.contrib.auth.admin import UserAdmin
+# from django.contrib.auth.admin import UserAdmin
 
 # Create your models here.
 class Company(models.Model):
-    currency_choice = [('CAD','CAD'),('USD','USD'),('CNY','CNY')]
     name = models.CharField('Company Name', max_length=120)
     tel  = models.CharField('Telephone',blank=True, max_length=20)
     email = models.EmailField('Email',blank=True)
@@ -15,6 +14,7 @@ class Company(models.Model):
     province = models.CharField('Province',max_length=20)
     country = models.CharField('Country',max_length=20)
     bank = models.CharField('Bank Name',blank=True,max_length=120)
+    currency_choice = [('CAD','CAD'),('USD','USD'),('CNY','CNY')]
     bk_currency = models.CharField('Currency', blank=True,choices=currency_choice ,max_length=3)
     account = models.CharField('Bank Account', blank=True,max_length=20)
     qhsf_rate = models.FloatField('QHSF Rate',blank=True, default=0)

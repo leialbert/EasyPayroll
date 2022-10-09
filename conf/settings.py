@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-amz_96wt8-h-c+tk&s*c@s&lf24+&hrx#0f5z0grcwyq=2&vev
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['payroll.leijingwei.com','localhost']
+ALLOWED_HOSTS = ['payroll.leijingwei.com','47.242.69.138','localhost']
 
 
 # Application definition

@@ -24,14 +24,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-amz_96wt8-h-c+tk&s*c@s&lf24+&hrx#0f5z0grcwyq=2&vev'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['payroll.leijingwei.com','localhost']
+ALLOWED_HOSTS = ['payroll.leijingwei.com','127.0.0.1','localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'simpleui',
     'manage.apps.ManageConfig',
     'dashboard.apps.DashboardConfig',
     'company.apps.CompanyConfig',
@@ -151,3 +152,5 @@ STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SIMPLEUI_DEFAULT_THEME = 'admin.lte.css'
